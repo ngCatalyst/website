@@ -1,4 +1,10 @@
+@font-face { font-family: 'logo'; src: url('basic-regular.ttf'); }
+
 body { font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; }
 
 /* remove border radius */
 .panel, .panel-heading, .alert { border-radius: 0; }
+
+.logo { font-family: 'logo'; font-size: 2em; }
+
+.alert.banner { padding-top: 0; padding-bottom: 0; }

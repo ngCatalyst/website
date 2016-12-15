@@ -1,26 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="catalyst">
     <head>
         <!-- inject:css -->
         <!-- endinject -->
     </head>
     <body>
-        <div class="alert alert-info">
-            <div class="container">This website is under development</div>
+        <div class="container">
+            <div class="logo">catalyst</div>
         </div>
 
-        <div class="container">
+        <div class="alert alert-info banner">
+            <div class="container">
+                <i class="fa fa-code"></i> <span>This website is under development</span>
+            </div>
+        </div>
+
+        <div class="container" data-ng-controller="homeCtrl as home">
             <div class="row">
+                <div class="col-md-8">
+                    <image-slider></image-slider>
+                </div>
                 <div class="col-md-4">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Twitter Feed
+                            <i class="fa fa-twitter"></i> <span>Twitter Feed</span>
                         </div>
                         <div class="panel-body">
                             <a class="twitter-timeline" href="https://twitter.com/CatalystDisrupt">Tweets by CatalystDisrupt</a>
                             <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
                         </div>
-                    </div>
+                     </div>
                 </div>
             </div>
         </div>
