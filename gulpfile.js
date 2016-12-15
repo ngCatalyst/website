@@ -14,9 +14,9 @@ gulp.task('compile', [], function () {
 
     var mainHtmlComponent = 'src/html/index.html';
 
-    var jsComponents = ['src/bower_components/**/dist/*.min.js', 'src/bower_components/**/dist/js/*.min.js', 'src/js/*.js', 'src/js/**/*.js', '!src/bower_components/bootstrap/dist/css/bootstrap-theme.min.css'];
+    var jsComponents = ['src/bower_components/**/dist/*.min.js', 'src/bower_components/**/dist/js/*.min.js', 'src/js/*.js', 'src/js/**/*.js'];
     var htmlComponents = [mainHtmlComponent, 'src/html/**/*.html'];
-    var cssComponents = ['src/bower_components/**/dist/css/*.min.css', 'src/css/*.css'];
+    var cssComponents = ['!src/bower_components/bootstrap/dist/css/bootstrap-theme.min.css', 'src/bower_components/**/dist/css/*.min.css', 'src/css/*.css'];
 
     gulp.src(htmlComponents).pipe(flatten()).pipe(gulp.dest('dist/app'));
 
@@ -43,7 +43,7 @@ gulp.task('webserver', [], function () {
 });
 
 gulp.task('watch', ['build', 'webserver'], function () {
-    return gulp.watch(['src/html/*.html', 'src/html/**/*.html'], ['build']);
+    return gulp.watch(['src/html/*.html', 'src/html/**/*.html', 'src/css/*.css'], ['build']);
 });
 
 gulp.task('build', ['compile'], function () {
